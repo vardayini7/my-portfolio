@@ -531,7 +531,7 @@ body {
 
 /* Slider container */
 .slider {
-    max-width: 900px; /* Adjust width for better responsiveness */
+    max-width: 1000px; /* Adjust width for better responsiveness */
     margin: 20px auto;
     overflow: hidden;
     position: relative;
@@ -550,7 +550,7 @@ body {
 
 /* Individual slide styling */
 .slide {
-    min-width: 100%; /* Ensures each slide takes full width */
+    min-width: 20%; /* Ensures each slide takes full width */
     padding: 20px 30px;
     background-color: #fff; /* Better contrast for text */
     border-radius: 20px;
