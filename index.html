@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="log.png" alt="IIT Logo">
+        </div>
+        <ul class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contacts">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="background firstSection" id="home">
+        <div class="box-main">
+            <div class="firstHalf">
+                <p class="text-big">Hi there! I'm Vardayini Agrawal</p>
+                <p class="text-small">
+                    I am Vardayini, a dedicated B.Tech student from IIT Gandhinagar in Mechanical Engineering with a passion for innovation and problem-solving. I have always had a passion for learning. Participating in quizzes helped me develop 
+                        logical thinking and made me appreciate sciences. I have always been eager to explore new 
+                        technologies and their applications. Keen to learn about computer science, I started with 
+                        fundamental concepts like QBasic and HTML and further enhanced my knowledge by learning C, 
+                        Java and Python. Intrigued by it, I opted for computers in my high school. My passion for
+                         computers grew stronger as I progressed through my academic journey. I am well-versed in Python and have worked on several projects, 
+                        including data analysis and making prototypes for solving real-world problems. 
+                       I am keen to connect with like-minded individuals and get mentored by top minds in this domain.
+                </p>
+            </div>
+            <div class="secondHalf">
+                <img src="mee.jpg" alt="It's me">
+            </div>
+        </div>
+    </section>
+
+    <section class="slider-section" id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <h3>Enhanced Condensation on Porous Copper Surfaces</h3>
+                    <p>
+                        The aim of our project was to enhance condensation by modifying the surface design. 
+                        This project demonstrates the changes in the rate of condensation and heat transfer efficiency caused 
+                        by altering the surfaces of copper plate and copper foam. The results clearly depict that 
+                        superhydrophobic copper foam and superhydrophilic copper plate gave the best outcomes. 
+                        Future work can be to use these surface treatments to enhance the rate of heat transfer in large-scale engineering systems.
+                    </p>
+                    <a href="_Project Report-Vardayini & Keerthana (1) (2).pdf" download class="btn-read-more">Read More</a>
+                </div>
+
+
+                <div class="slide">
+                    <h3>Accident Detection and Alert System</h3>
+                    <p>
+                        In this project I have built an accident detection and alert system that detects an accident and records its GPS
+                        coordinates. Further, it sends an SMS on the stored number with the location coordinates of the accident site. This
+                        project involved the use of arduino, GPS, GSM and accelerometer
+                    </p>
+                    <a href="_https://iitgnacin-my.sharepoint.com/my?id=%2Fpersonal%2F23110353%5Fiitgn%5Fac%5Fin%2FDocuments%2FEE%20Project%20Report%20%281%29%2Epdf&parent=%2Fpersonal%2F23110353%5Fiitgn%5Fac%5Fin%2FDocuments&ga=1" download class="btn-read-more">Read More</a>
+                </div>
+
+                <div class="slide">
+                    <h3>DrowSee: Driver Safety System</h3>
+                    <p>
+                        Utilised pressure and eye movement detection sensors to make a device that will beep in case the driver is drowsy.
+            Made a compact model that can is compatible with all types of vehicles.
+                    </p>
+                    <a href="https://iitgnacin-my.sharepoint.com/personal/23110353_iitgn_ac_in/_layouts/15/stream.aspx?id=%2Fpersonal%2F23110353%5Fiitgn%5Fac%5Fin%2FDocuments%2Fprototype%20video2%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E74eaf3bb%2D7cb0%2D44d8%2Db83a%2D5f18453fef46" download class="btn-read-more">Watch video</a>
+                </div>
+
+            </div>
+            <div class="navigation">
+                <button class="nav-btn prev" onclick="prevSlide()">&#10094;</button>
+                <button class="nav-btn next" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contacts">
+        <h2 class="text-center">Contact Me</h2>
+        <nav>
+            <a href="https://www.linkedin.com/in/vardayini-agrawal" target="_blank">
+                <img src="174857.png" class="icon" alt="LinkedIn">
+            </a>
+            <a href="mailto:vardayini7@gmail.com" target="_blank">
+                <img src="Gmail_icon_(2020).svg.png" class="icon" alt="Gmail">
+            </a>
+            <a href="https://wa.me/7021446279" target="_blank">
+                <img src="images.jpeg" class="icon" alt="WhatsApp">
+            </a>
+            <a href="RESUME.pdf" download>
+                <img src="resumeeee.png" class="icon" alt="Resume">
+            </a>
+        </nav>
+    </section>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        let currentIndex = 0;
+
+        function nextSlide() {
+            const totalSlides = document.querySelectorAll('.slide').length;
+            currentIndex = (currentIndex + 1) % totalSlides;
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        function prevSlide() {
+            const totalSlides = document.querySelectorAll('.slide').length;
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+    </script>
+</body>
+</html>
